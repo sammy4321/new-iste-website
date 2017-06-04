@@ -1073,31 +1073,31 @@ a.btn:focus{
 
 .ch-img-1 { 
 
-	background-image: url(../images/crypt.jpg);
+	background-image: url(../img/sigicons/crypt.jpeg) ;
 }
 
 .ch-img-2 { 
-	background-image: url(../images/charge.jpg);
+	background-image: url(../img/sigicons/charge.jpeg);
 }
 
 .ch-img-3 { 
-	background-image: url(../images/credit.jpg);
+	background-image: url(../img/sigicons/credit.jpeg);
 }
 
 .ch-img-4 { 
-	background-image: url(../images/clutch.jpg);
+	background-image: url(../img/sigicons/clutch.jpeg);
 }
 
 .ch-img-5 { 
-	background-image: url(../images/create.jpg);
+	background-image: url(../img/sigicons/create.jpeg);
 }
 
 .ch-img-6 { 
-	background-image: url(../images/chronicle.jpg);
+	background-image: url(../img/sigicons/chronicle.jpeg);
 }
 
 .ch-img-7 { 
-	background-image: url(../images/concrete.jpg);
+	background-image: url(../img/sigicons/concrete.jpeg);
 }
 
 .ch-info {
