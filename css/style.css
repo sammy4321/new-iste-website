@@ -51,8 +51,8 @@ h4,
 h5,
 h6 {
     margin: 0 0 30px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
 	color: #111;
 }
 
@@ -256,18 +256,20 @@ blockquote strong {
 .navbar-custom .nav li.active {
     outline: 0;
     background-color: rgba(255,255,255,.2);
+    color: white;
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li.active {
     outline: 0;
     background-color: rgba(255,255,255,.2);
+    color: white;
 }
 
 .navbar-toggle {
     padding: 4px 6px;
     font-size: 14px;
-    color: #fff;
+    color: #DE5E60;
 }
 
 .navbar-toggle:focus,
