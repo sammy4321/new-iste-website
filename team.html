@@ -17,6 +17,7 @@ font-family: 'Titillium Web', sans-serif;
   	}
   	a:hover{
   		cursor: pointer;
+      background-color: black;
   	}
   	@font-face {
 	font-family: 'Icons';
@@ -28,61 +29,149 @@ font-family: 'Titillium Web', sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.affix
+{
+    top: 0;
+}
+.affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+  li:hover{
+    background-color: black;
+  }
+ 
+
   </style>
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<div class="container-fluid" style="background-color:black;color:white;height:200px;">
+  <br><br><br><h1 id="facultyadviser"></h1>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h1 class="text-center">ISTE-NITK</h1>
+      
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="background-color: #26292E;border-radius: 0;border-width: 5px 0 0 0;border-color: #DE5E60;border-bottom: 1px solid black;" >
+<br>
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html" style="font-family: 'Titillium Web', sans-serif;font-weight: 700;color: white;font-size: 20px;letter-spacing: 1px;"><img style="position:relative; width: 95px; margin-top: -35px; margin-bottom: -20px;" src="./img/navbarlogo.png" ></a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#facultyadviser" style="font-family: 'Titillium Web', sans-serif;font-weight: 500;color: white;font-size: 16px;letter-spacing: 1px;">FACULTY ADVISER</a></li>
+          <li><a href="#ourcore" style="font-family: 'Titillium Web', sans-serif;font-weight: 500;color: white;font-size: 16px;letter-spacing: 1px;">OUR CORE</a></li>
+          <li><a href="#jrcr" style="font-family: 'Titillium Web', sans-serif;font-weight: 500;color: white;font-size: 16px;letter-spacing: 1px;">JUNIOR CORE</a></li>
+          <li><a href="#sighead" style="font-family: 'Titillium Web', sans-serif;font-weight: 500;color: white;font-size: 16px;letter-spacing: 1px;">SIG HEADS</a></li>
+          <li><a href="#prevc" style="font-family: 'Titillium Web', sans-serif;font-weight: 500;color: white;font-size: 16px;letter-spacing: 1px;">PREVIOUS CORE</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br>
+</nav> 
+
+<!--
 <div style="background-color:#2F3238;">
 <div class="container text-center" >
-<br><br><br><br><br><br>
+<br><br>
   <h1 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 48px;">INDIAN SOCIETY FOR TECHNICAL EDUCATION</h1>
    
   <h3 style="color: #DE5E60;font-family: 'Titillium Web', sans-serif;font-weight: 300;font-size: 24px;"><strong>NITK</strong></h3>
   <img src="./img/logo2.png" style="width: 300px;">
   
-  <br><br>    <br><br> <br><br>        
+  <br><br>            
 </div>
-</div>
+</div>-->
 
-<div style="background-color:#26292E;">
+<div style="background-color:#2F3238;" >
 <div class="container text-center" >
-<br><br><br><br><br><br>
+<br><br>
   <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 48px;">FACULTY ADVISER</h2><br><br>
    
   
-  <img class="img-circle" src="./img/faces/facad/facad.jpg" style="width: 200px;"><br><br>
+  <img class="img-rounded grow" src="./img/faces/facad/subray-r-hegde-image.jpg" style="width: 200px;"><br><br>
   <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 32px;">Name</h2>
 
   <br>
 	<p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Description</p>
-  <br><br>    <br><br> <br><br>        
-</div>
+  <h1 id="ourcore"></h1>
+  <br><br>    
 </div>
 
-<div style="background-color:#2F3238;">
+<div style="background-color:#26292E;" >
 <div class="container text-center" >
-<br><br><br><br><br><br>
+<br><br>
   <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 48px;">OUR CORE</h2><br><br>
    <div class="row">
 
-   	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded" src="./img/faces/core/rege.jpg" style="width: 200px;">
+   	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded grow" src="./img/faces/core/rege.jpg" style="width: 200px;">
                             <br><br>
                             <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Convener</h2>
 
                     		<p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Aniket Rege</p>
                             <br><br></div>
-  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded" src="./img/faces/core/mishra.jpg" style="width: 200px;">
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded grow" src="./img/faces/core/mishra.jpg" style="width: 200px;">
                             <br><br>
                             <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Chairperson</h2>
 
                     		<p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Samarth Mishra</p>
                             <br><br></div>
-  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded" src="./img/faces/core/rithesh.jpg" style="width: 200px;">
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded grow" src="./img/faces/core/rithesh.jpg" style="width: 200px;">
                             <br><br>
                             <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">President</h2>
 
                     		<p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Rithesh Waykole</p>
                             <br><br></div>
-  	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded" src="./img/faces/core/jatin.jpeg" style="width: 200px;">
+  	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded grow" src="./img/faces/core/jatin.jpeg" style="width: 200px;">
                             <br><br>
                             <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;;">Joint Convener</h2>
 
@@ -95,13 +184,13 @@ font-family: 'Titillium Web', sans-serif;
    <div class="row">
    <div class="col-lg-3 col-md-3 col-sm-0 col-xs-0"></div>
 
-   	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded" src="./img/faces/core/deepak.jpg" style="width: 200px;">
+   	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded grow" src="./img/faces/core/deepak.jpg" style="width: 200px;">
                             <br><br>
                             <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Chief Coordinator</h2>
 
                     		<p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Deepak Devaraj</p>
                             <br><br></div>
-  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded" src="./img/faces/core/pratheek.jpg" style="width: 200px;">
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded grow" src="./img/faces/core/pratheek.jpg" style="width: 200px;">
                             <br><br>
                             <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Secretary</h2>
 
@@ -115,29 +204,29 @@ font-family: 'Titillium Web', sans-serif;
    </div>
   
       
+<h1 id="jrcr"></h1>
 
-
-  <br><br> <br><br>        
+  <br><br>        
 </div>
 </div>
 
 
-<div style="background-color:#26292E;">
+<div style="background-color:#2F3238;">
 <div class="container text-center" >
-<br><br><br><br><br><br>
+<br><br>
   <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 48px;">JUNIOR CORE</h2><br><br>
   
    <div class="row">
 
    	<div class="col-lg-3 col-md-3 col-sm-0 col-xs-0">
                             </div>
-  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded" src="./img/faces/jrcore/jessina.jpg" style="width: 200px;">
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded grow" src="./img/faces/jrcore/jessina.jpg" style="width: 200px;">
                             <br><br>
                            <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Treasurer</h2>
 
                     		<p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Jessina Cherry</p>
                             <br><br></div>
-  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded" src="./img/faces/jrcore/vignesh.jpg" style="width: 200px;">
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><img class="img-rounded grow" src="./img/faces/jrcore/vignesh.jpg" style="width: 200px;">
                             <br><br>
                             <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Social Initiative Head</h2>
 
@@ -151,15 +240,15 @@ font-family: 'Titillium Web', sans-serif;
    </div>
   
       
+<h1 id="sighead"></h1> 
 
-
-  <br><br> <br><br>        
+  <br><br>   
 </div>
 </div>
 
-<div style="background-color:#2F3238;">
+<div style="background-color:#26292E;" >
 	<div class="container text-center">
-	<br><br><br>
+	<br><br>
   <h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 48px;">SIG HEADS</h2><br><br>
 
 			<div class="col-md-4 col-lg-4">
@@ -167,14 +256,14 @@ font-family: 'Titillium Web', sans-serif;
         <div class="col-md-4"></div> <!-- this column empty -->
         <div class="col-md-4">
         <h3 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Crypt</h3>
-        <img src="./img/faces/sigheads/shiv.jpg" style="width: 100px;" class="img-rounded">
+        <img src="./img/faces/sigheads/shiv.jpg" style="width: 100px;" class="img-rounded grow">
         <br><br>
         <p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Shiv Shankar</p>
         <h1 style="height: 40px;"> </h1>
          </div>
         <div class="col-md-4">
         <h3 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Charge</h3>
-        <img src="./img/faces/sigheads/abhijay.jpg" style="width: 100px;" class="img-rounded">
+        <img src="./img/faces/sigheads/abhijay.jpg" style="width: 100px;" class="img-rounded grow">
         <br><br>
         <p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Abhijay Kumar Pandit</p>
         <h1 style="height: 40px;"> </h1>
@@ -186,35 +275,35 @@ font-family: 'Titillium Web', sans-serif;
     <div class="row text-center">
         <div class="col-md-2">
         <h3 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Credit</h3>
-             <img src="./img/faces/sigheads/deepak.jpg" style="width: 100px;" class="img-rounded">
+             <img src="./img/faces/sigheads/deepak.jpg" style="width: 100px;" class="img-rounded grow">
              <br><br>
         <p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Deepak Devaraj</p>
         <h1 style="height: 40px;"> </h1>
         </div>
         <div class="col-md-2">
         <h3 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Chronicle</h3>
-             <img src="./img/faces/sigheads/chronicle.jpg" style="width: 100px;" class="img-rounded">
+             <img src="./img/faces/sigheads/chronicle.jpg" style="width: 100px;" class="img-rounded grow">
               <br><br>
         <p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Yashaswini And Nihar</p>
         <h1 style="height: 40px;"> </h1>
         </div>
         <div class="col-md-2">
         <h3 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Clutch</h3>
-             <img src="./img/faces/sigheads/saiseshnag.jpg" style="width: 100px;" class="img-rounded">
+             <img src="./img/faces/sigheads/saiseshnag.jpg" style="width: 100px;" class="img-rounded grow">
              <br><br>
         <p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Sai Seshnag</p>
         <h1 style="height: 40px;"> </h1>
          </div>
         <div class="col-md-2">
         <h3 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Create</h3>
-          <img src="./img/faces/facad/facad.jpg" style="width: 100px;" class="img-rounded">
+          <img src="./img/faces/facad/facad.jpg" style="width: 100px;" class="img-rounded grow">
           <br><br>
         <p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Name</p>
         <h1 style="height: 40px;"> </h1>
         </div>
         <div class="col-md-2">
         <h3 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">Concrete</h3>
-             <img src="./img/faces/facad/facad.jpg" style="width: 100px;" class="img-rounded">
+             <img src="./img/faces/facad/facad.jpg" style="width: 100px;" class="img-rounded grow">
              <br><br>
         <p style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 20px;">Name</p>
         <h1 style="height: 40px;"> </h1>
@@ -225,7 +314,7 @@ font-family: 'Titillium Web', sans-serif;
 
 
 
-<br><br><br>
+<br><br>
 <div class="container text-center">
   
   <!-- Trigger the modal with a button -->
@@ -250,14 +339,14 @@ font-family: 'Titillium Web', sans-serif;
 
 		</div>
 
-
+<h1 id="prevc"></h1>
 
 <br><br><br>
 
 		</div>
 
 </div>
-<div style="background-color:#26292E;">
+<div style="background-color:#2F3238;">
 <div class="container text-center" >
 <br><br><br><br><br><br>
   <h1 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: white;font-size: 48px;">PREVIOUS CORE</h1>
@@ -273,7 +362,7 @@ font-family: 'Titillium Web', sans-serif;
 					<br><br>
 					<h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">2015-2016</h2><br><br><br>
 					
-					<a data-toggle="modal" data-target="#madal1" style="background-color: #DE5E60;border-color: #DE5E60;"><img class="img-rounded" src="./img/prevcore/prevcore.jpg" style="width: 100%;"></a>
+					<a data-toggle="modal" data-target="#madal1" style="background-color: #DE5E60;border-color: #DE5E60;"><img class="img-rounded  grow" src="./img/prevcore/prevcore.jpg" style="width: 100%;"></a>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="madal1">
   <div class="modal-dialog modal-lg" role="document" style="width: 70vw;">
@@ -306,7 +395,7 @@ font-family: 'Titillium Web', sans-serif;
 
 					<br><br>
 					<h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">2014-2015</h2><br><br><br>
-										<a data-toggle="modal" data-target="#madal2" style="background-color: #DE5E60;border-color: #DE5E60;"><img class="img-rounded" src="./img/prevcore/prevcore.jpg" style="width: 100%;"></a>
+										<a data-toggle="modal" data-target="#madal2" style="background-color: #DE5E60;border-color: #DE5E60;"><img class="img-rounded grow" src="./img/prevcore/prevcore.jpg" style="width: 100%;"></a>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="madal2">
   <div class="modal-dialog modal-lg" role="document" style="width: 70vw;">
@@ -333,7 +422,7 @@ font-family: 'Titillium Web', sans-serif;
 
 					<br><br>
 					<h2 style="font-family: 'Titillium Web', sans-serif;font-weight: 300;color: #DE5E60;">2013-2014</h2><br><br><br>
-										<a data-toggle="modal" data-target="#madal3" style="background-color: #DE5E60;border-color: #DE5E60;"><img class="img-rounded" src="./img/prevcore/prevcore.jpg" style="width: 100%;"></a>
+										<a data-toggle="modal" data-target="#madal3" style="background-color: #DE5E60;border-color: #DE5E60;"><img class="img-rounded grow" src="./img/prevcore/prevcore.jpg" style="width: 100%;"></a>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="madal3">
   <div class="modal-dialog modal-lg" role="document" style="width: 70vw;">
@@ -359,7 +448,7 @@ font-family: 'Titillium Web', sans-serif;
 
 
 
-    <br><br> <br><br>        
+    <br><br>        
 </div>
 </div>
 
